@@ -9,7 +9,7 @@ npm run build
 or
 
 ```
-yarn run watch
+npm run watch
 ```
 
 to bundle your application
