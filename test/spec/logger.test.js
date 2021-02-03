@@ -1,8 +1,8 @@
-import { logName } from "../utils/logger";
+import { logName } from "../../src/utils/logger";
 
 describe("log", () => {
   it("should log name", () => {
     logName("name");
-    expect(output.mock.calls.length).toBe(2);
+    expect(output.text.mock.calls.length).toBe(1);
   });
 });
