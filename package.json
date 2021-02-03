@@ -7,7 +7,7 @@
     "watch": "rollup --config rollup.config.js --environment BUILD:development --watch",
     "build:prod": "rollup --config rollup.config.js --environment BUILD:production",
     "watch:prod": "rollup --config rollup.config.js --environment BUILD:production --watch",
-    "test": "dotenv jest"
+    "test": "dotenv jest --config test/jest.config.js"
   },
   "author": "Johann Hospice",
   "license": "ISC",
