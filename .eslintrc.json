@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "base": "readonly",
+    "input": "readonly",
+    "output": "readonly"
+  },
+  "type": "es"
+}
