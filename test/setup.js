@@ -1,3 +1,3 @@
-import jest from "jest";
+import { jest } from "@jest/globals";
 
-global.output = jest.fn(console.log);
+global.output = { text: jest.fn(console.log) };

@@ -50,7 +50,7 @@ export default glob.sync("./src/scripts/*.{js,ts}").map((path) => ({
     ),
     // transpile les modules importés en cjs
     commonjs({
-      include: "node_modules/**",
+      include: /node_modules/,
     }),
     // inclus les modules importés dans les script
     nodeResolve(),

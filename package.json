@@ -7,13 +7,22 @@
     "watch": "rollup --config rollup.config.js --environment BUILD:development --watch",
     "build:prod": "rollup --config rollup.config.js --environment BUILD:production",
     "watch:prod": "rollup --config rollup.config.js --environment BUILD:production --watch",
-    "test": "dotenv jest --config test/jest.config.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll"
+  },
+  "type": "module",
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ],
+    "transform": {},
+    "testEnvironment": "jest-environment-node"
   },
   "author": "Johann Hospice",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@babel/plugin-syntax-top-level-await": "^7.12.1",
+    "@babel/plugin-syntax-top-level-await": "^7.12.13",
     "@babel/preset-env": "^7.12.1",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
