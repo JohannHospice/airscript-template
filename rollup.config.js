@@ -4,9 +4,10 @@ import dotenv from "dotenv";
 import commonjs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
+import jsonPackage from "./package.json";
 
 const env = (() => {
-  const path = process.env[`npm_package_dotenv_${process.env.BUILD}`];
+  const path = jsonPackage.dotenv[process.env.BUILD];
   const { parsed, error } = dotenv.config({
     path: path,
   });
